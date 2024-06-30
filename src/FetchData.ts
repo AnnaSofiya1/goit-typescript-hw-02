@@ -1,6 +1,7 @@
 import axios from 'axios';
+import { Image } from './types';
 
-export const makeGallery = async (value, page) => {
+export const makeGallery = async (value: string, page: number):Promise<Image[]> => {
     axios.defaults.baseURL = "https://api.unsplash.com/search/photos";
       const API_KEY = "819YrVTmFkvHJTZVCpPZsBzBxsantDvWlKXeJI5q6Ko";
       const params = {
